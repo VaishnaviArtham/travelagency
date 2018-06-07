@@ -1,0 +1,114 @@
+<html>
+
+<style>
+body
+{
+  background-image: url("fog-big.jpg"); 
+  background-repeat: no-repeat;
+	text-align: center;
+}
+</style>
+<head>
+<title> CUSTOMER DETAILS </title>
+<script type="text/javascript">
+function validate()
+{
+   if( document.CUSTOMER_DETAILS.name.value == "" )
+   {
+     window.alert( "Please enter Name!" );
+     document.CUSTOMER_DETAILS.name.focus() ;
+     return false;
+   }
+
+   if( document.CUSTOMER_DETAILS.address.value == "" )
+   {
+     window.alert( "Please provide address!" );
+     document.CUSTOMER_DETAILS.address.focus() ;
+     return false;
+   }
+   
+   if( document.CUSTOMER_DETAILS.city.value == "" )
+   {
+     window.alert( "Please enter city!" )
+     document.CUSTOMER_DETAILS.city.focus() ;
+     return false;
+   }
+
+   if( document.CUSTOMER_DETAILS.state.value == "" )
+   {
+     window.alert( "Please enter state!" );
+     document.CUSTOMER_DETAILS.state.focus() ;
+     return false;
+   }
+     
+   if( document.CUSTOMER_DETAILS.country.value == "" )
+   {
+     window.alert( "Please enter country!" );
+     document.CUSTOMER_DETAILS.country.focus() ;
+     return false;
+   }   
+    if( document.CUSTOMER_DETAILS.email.value == "" )
+   {
+     window.alert( "Please enter email!" );
+     document.CUSTOMER_DETAILS.email.focus() ;
+     return false;
+   }   
+  
+  if( document.CUSTOMER_DETAILS.mob no.value == "-1" ||
+           isNaN( document.CUSTOMER_DETAILS.mob no.value) ||
+           document.CUSTOMER_DETAILS.mob no.value.length != 10 )
+   {
+     window.alert( "Please provide a Phone Number in the format 123." );
+     document.CUSTOMER_DETAILS.mob no.focus() ;
+     return false;
+   }
+   return true;
+}	
+</script>
+</head>
+
+<body>
+<form action="#"  name="CUSTOMER_DETAILS" onsubmit="return validate();"></br></br>
+<h1>CUSTOMER DETAILS</h1>
+<p>
+<center>
+</br>
+<table>
+<tr>
+<td>
+<b> Name: </b></td>
+ <td> <input type="text" size = "20" max="20" id="name" name="name" > </td>
+ </tr>
+ <tr>
+<td> <b> Address:</b> </td> 
+<td> <textarea name="address" id "address" rows="3" cols="40" max=50 > </textarea> </td>
+</tr>
+<tr>
+<td><b>City</b></td>
+<td><input type="text" name="city"
+id="city" name="city" size="30"></td>
+</tr>
+<tr>
+<td><b>State</b></td>
+<td><input type="text" name="state"
+id="state" size="30"></td>
+</tr>
+<tr>
+<td><b>Country</b></td>
+<td><input type="text" name="country"
+id="country" size="30"></td>
+</tr>
+
+ <tr>
+ <td> <b>E-mail:</b> </td> <td><input type= "text" max="20" size="20" id= "email" name="email"> </td> </tr>
+ <tr> <td><b>Mobile no: </b></td><td><input type = "text" max=10 id="mob no" name="mob no"></td></tr>
+ <tr> <td> <b> Gender: </b></td><td> <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other </td></tr>
+<tr><td><input type="submit" value="Submit"> </td><td>   <input type="reset" value="Reset">  </td></tr>
+</center>
+</p>
+</form>
+
+</body>
+</html>
